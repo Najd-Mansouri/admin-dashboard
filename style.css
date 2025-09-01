@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+}
+
+/* Grid Layout */
+
+.wrapper {
+    display: grid;
+    grid-template-columns: auto repeat(3, 1fr);
+    grid-template-rows: auto repeat(4, 1fr);
+    min-height: 100vh;
+    background-color: #eee;
+
+    
+}
+
+aside {
+    background-color: lightblue;
+    padding: 2rem;
+    grid-row: 1 / 6;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.link {
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.btn {
+    border-radius: 25px;
+    border: none;
+    background-color: rgb(19, 79, 211);
+    color: white;
+    padding: 10px 32px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(19, 80, 211, 0.911);
+    box-shadow: 0 0 5px rgba(19, 80, 211, 0.911);
+}
+
+header {
+    padding: 1rem;
+    grid-column: 2 / 5;
+    background-color: #fff;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+    /* Glassmorphism navbar*/
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1;
+    
+}
+
+.first-row,
+.second-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="text"] {
+    border-radius: 25px;
+    padding: 5px;
+    background-color: #eee;
+    font-size: 90%;
+    font-family: inherit;
+    width: 100%;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.logo, .link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.search-field {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-basis: 50%;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.user-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+
+
+/* Styling the Projects Section */
+
+
+.projects {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+
+.projects-wrapper {
+    grid-row: 2 / span 4;
+    grid-column: 2 / span 2;
+    justify-self: center;
+}
+
+.project {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    border-left: 10px solid orange;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+}
+
+.project:hover {
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.icons {
+    text-align: right;
+    margin-right: 10px;
+}
+
+.projects-wrapper > h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 1rem;
+}
+
+/* Styling the Announcements Section */
+
+.news {
+    grid-row: 2 / 6;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    gap: 1rem;
+    
+}
+
+.announcements-wrapper, 
+.trends {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    
+    
+    
+    
+}
+
+.announcement {
+    border-bottom: 2px solid grey;
+    margin-bottom: 1rem;
+}
+
+.announcement > p {
+    max-width: 30ch;
+    line-height: 1.2rem;
+}
+
+
+/* Styling the Trending Section */
+
+.trend {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.secondary-text {
+    color: grey;
+    font-size: 0.9rem;
+}
+
+
